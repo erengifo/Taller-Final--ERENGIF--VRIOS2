@@ -30,16 +30,16 @@ public class Main {
 
             switch (opc) {
                 case 1:
-                    mostrarMenuDatosPrimitivos(scanner);
+                    mostrarMenuDatosPrimitivos();
                     break;
                 case 2:
-                    mostrarOpcionesString(scanner);
+                    mostrarOpcionesString();
                     break;
                 case 3:
-                    mostrarOpcionConstante(scanner);
+                    mostrarOpcionConstante();
                     break;
                 case 4:
-                    tiposDeOperadores(scanner);
+                    tiposDeOperadores();
                     break;
                 case 5:
                     condicionalelseif();
@@ -54,10 +54,10 @@ public class Main {
                     bucledowhile();
                     break;
                 case 9:
-                    System.out.println("crea menú Bucle WHILE");
+                    buclewhile();
                     break;
                 case 10:
-                    System.out.println("crea menú Bucle FOR");
+                    buclefor();
                     break;
                 case 0:
                     cerrar = true;
@@ -69,16 +69,8 @@ public class Main {
         } while (!cerrar);
     }
 
-    public static void mostrarMenuDatosPrimitivos(Scanner scanner) {
-        Scanner opcByte = new Scanner(System.in);
-        Scanner opcShort = new Scanner(System.in);
-        Scanner opcInt = new Scanner(System.in);
-        Scanner opcLong = new Scanner(System.in);
-        Scanner opcFloat = new Scanner(System.in);
-        Scanner opcDouble = new Scanner(System.in);
-        Scanner opcChar = new Scanner(System.in);
-        Scanner opcBoolean = new Scanner(System.in);
-
+    public static void mostrarMenuDatosPrimitivos() {
+        Scanner scanner = new Scanner(System.in);
         boolean cerrar = false;
         int opcdp;
 
@@ -110,22 +102,7 @@ public class Main {
                     System.out.println("*                EJEMPLO               *");
                     System.out.println("*         byte diasMes = 31;           *");
                     System.out.println("****************************************");
-                    System.out.println("*  1. Ver siguiente tipo de dato       *");
-                    System.out.println("*  0. Salir.                           *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int numeroByte = opcByte.nextInt();
-                    switch (numeroByte) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-
-
-                    }
-
+                    break;
                 case 2:
                     System.out.println("****************************************");
                     System.out.println("*                SHORT                 *");
@@ -135,22 +112,8 @@ public class Main {
                     System.out.println("*                EJEMPLO               *");
                     System.out.println("*      short temperatura = -10         *");
                     System.out.println("****************************************");
-                    System.out.println("*   1. Ver siguiente tipo de dato      *");
-                    System.out.println("*   0. Salir                           *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int numeroShort = opcShort.nextInt();
-                    switch (numeroShort) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 3:
-
                     System.out.println("****************************************");
                     System.out.println("*                  INT                 *");
                     System.out.println("****************************************");
@@ -162,20 +125,7 @@ public class Main {
                     System.out.println("*             int edad=101             *");
                     System.out.println("*                                      *");
                     System.out.println("****************************************");
-                    System.out.println("*  1. Ver siguiente tipo de dato       *");
-                    System.out.println("*  0. Salir                            *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int itemInt = opcInt.nextInt();
-                    switch (itemInt) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 4:
                     System.out.println("*****************************************");
                     System.out.println("*                 LONG                  *");
@@ -188,20 +138,7 @@ public class Main {
                     System.out.println("*   Long velocidadLuz =  299792458,36   *");
                     System.out.println("*                                       *");
                     System.out.println("*****************************************");
-                    System.out.println("*  1. Ver siguiente tipo de dato        *");
-                    System.out.println("*  0. Salir.                            *");
-                    System.out.println("*****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int itemLong = opcLong.nextInt();
-                    switch (itemLong) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 5:
                     System.out.println("****************************************");
                     System.out.println("*                 FLOAT                *");
@@ -216,20 +153,7 @@ public class Main {
                     System.out.println("*        float pi = 3.1415926535       *");
                     System.out.println("*                                      *");
                     System.out.println("****************************************");
-                    System.out.println("*   1. Ver siguiente tipo de dato      *");
-                    System.out.println("*   0. Salir                           *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int itemFloat = opcFloat.nextInt();
-                    switch (itemFloat) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 6:
                     System.out.println("****************************************");
                     System.out.println("*                 DOUBLE               *");
@@ -243,20 +167,7 @@ public class Main {
                     System.out.println("*  double e = 2.718281828459045235360; *");
                     System.out.println("*                                      *");
                     System.out.println("****************************************");
-                    System.out.println("*    1. Ver siguiente tipo de dato     *");
-                    System.out.println("*    0. Salir                          *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-                    int itemDouble = opcDouble.nextInt();
-
-                    switch (itemDouble) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 7:
                     System.out.println("*****************************************");
                     System.out.println("*                  CHAR                 *");
@@ -270,20 +181,7 @@ public class Main {
                     System.out.println("*      char letraANumerico = 61;        *");
                     System.out.println("*                                       *");
                     System.out.println("*****************************************");
-                    System.out.println("*   1. Ver siguiente tipo de dato       *");
-                    System.out.println("*   0. Salir                            *");
-                    System.out.println("*****************************************");
-                    System.out.print("Digite su opción: ");
-                    int itemChar = opcChar.nextInt();
-
-                    switch (itemChar) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 8:
                     System.out.println("****************************************");
                     System.out.println("*                BOOLEAN               *");
@@ -297,33 +195,20 @@ public class Main {
                     System.out.println("*       boolean falso = false;         *");
                     System.out.println("*                                      *");
                     System.out.println("****************************************");
-                    System.out.println("*   1. Ver siguiente tipo de dato      *");
-                    System.out.println("*   0. Salir                           *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-                    int itemBoolean = opcBoolean.nextInt();
-
-                    switch (itemBoolean) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
+            if (opcdp == 9 || opcdp == 0) {
+                break;
+            }
+            salida();
         } while (!cerrar);
-
     }
 
-    private static void mostrarOpcionesString(Scanner scanner) {
-        Scanner opcString = new Scanner(System.in);
-        Scanner opcStringBuilder = new Scanner(System.in);
-        Scanner opcStringBuffer = new Scanner(System.in);
-
+    private static void mostrarOpcionesString() {
+        Scanner scanner = new Scanner(System.in);
         boolean cerrar1 = false;
         int opcStrin;
 
@@ -334,12 +219,11 @@ public class Main {
             System.out.println("*        1. String                    *");
             System.out.println("*        2. StringBuilder             *");
             System.out.println("*        3. StringBuffer              *");
-            System.out.println("*        9. Volver al menú anterior   *");
+            System.out.println("*        4. Volver al menú anterior   *");
             System.out.println("*        0. Salir                     *");
             System.out.println("***************************************");
             System.out.print("Digite su opción: ");
             opcStrin = scanner.nextInt();
-
 
             switch (opcStrin) {
                 case 1:
@@ -357,20 +241,7 @@ public class Main {
                     System.out.println("*   saludo = saludo + \" Mundo\";      *");
                     System.out.println("*                                      *");
                     System.out.println("****************************************");
-                    System.out.println("*   1. Ver siguiente concepto          *");
-                    System.out.println("*   0. Salir.                          *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-                    int itemString = opcString.nextInt();
-
-                    switch (itemString) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 2:
                     System.out.println("*******************************************");
                     System.out.println("*           StringBuilder                 *");
@@ -388,19 +259,7 @@ public class Main {
                     System.out.println("* String resultado = sb.toString();       *");
                     System.out.println("*                                         *");
                     System.out.println("*******************************************");
-                    System.out.println("*    1.Ver siguiente concepto             *");
-                    System.out.println("*    0. Salir                             *");
-                    System.out.println("*******************************************");
-                    System.out.print("Digite su opción: ");
-                    int itemStringBuilder = opcStringBuilder.nextInt();
-
-                    switch (itemStringBuilder) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
+                    break;
                 case 3:
                     System.out.println("*******************************************");
                     System.out.println("*           StringBuffer                  *");
@@ -420,42 +279,31 @@ public class Main {
                     System.out.println("* String resultado = sbf.toString();      *");
                     System.out.println("*                                         *");
                     System.out.println("*******************************************");
-                    System.out.println("*              0. Salir                   *");
-                    System.out.println("*******************************************");
-                    System.out.print("Digite su opción: ");
-                    int itemtringBuffer = opcStringBuffer.nextInt();
-
-                    switch (itemtringBuffer) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
+            if (opcStrin == 4 || opcStrin == 0) {
+                break;
+            }
+            salida();
         } while (!cerrar1);
     }
 
-    private static void mostrarOpcionConstante(Scanner scanner) {
-        Scanner opcConstante = new Scanner(System.in);
-        Scanner opcEjmConstante = new Scanner(System.in);
-
-
-        boolean cerrar2 = false;
+    private static void mostrarOpcionConstante() {
+        Scanner scanner = new Scanner(System.in);
+        boolean cerrar = false;
         int opcConstantes;
 
         do {
             System.out.println("***************************************");
             System.out.println("*             CONSTANTES              *");
             System.out.println("***************************************");
-            System.out.println("*         1. Significado              *");
-            System.out.println("*         2. Ejemplo                  *");
+            System.out.println("*         1. Explicación              *");
+            System.out.println("*         2. Ejercicio*               *");
             System.out.println("*         3. Volver al menú anterior  *");
-            System.out.println("*         4. Salir                    *");
+            System.out.println("*         0. Salir                    *");
             System.out.println("***************************************");
             System.out.print("Digite su opción: ");
             opcConstantes = scanner.nextInt();
@@ -470,21 +318,7 @@ public class Main {
                     System.out.println("* utilizan pararepresentar valores     *");
                     System.out.println("* fijos y de lectura única             *");
                     System.out.println("****************************************");
-                    System.out.println("*  1. Ver Ejemplo                      *");
-                    System.out.println("*  0. Salir.                           *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int sigConstante = opcConstante.nextInt();
-                    switch (sigConstante) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
                     break;
-
                 case 2:
                     System.out.println("****************************************");
                     System.out.println("*               EJEMPLO                *");
@@ -494,34 +328,21 @@ public class Main {
                     System.out.println("* public static final                  *");
                     System.out.println("* boolean MODO_DEPURACION = true;      *");
                     System.out.println("****************************************");
-                    System.out.println("*  0. Salir.                           *");
-                    System.out.println("****************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int ejmConstante = opcEjmConstante.nextInt();
-                    switch (ejmConstante) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
+                    break;
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-        }
-        while (!cerrar2);
+            if (opcConstantes == 3 || opcConstantes == 0) {
+                break;
+            }
+            salida();
+        } while (!cerrar);
     }
 
-    private static void tiposDeOperadores(Scanner scanner) {
-        Scanner opcAritmetica = new Scanner(System.in);
-        Scanner opcRelacionales = new Scanner(System.in);
-        Scanner opcLogicos = new Scanner(System.in);
-        Scanner opcAsignacion = new Scanner(System.in);
-        Scanner opcIncDecr = new Scanner(System.in);
-
-        boolean cerrar3 = false;
+    private static void tiposDeOperadores() {
+        Scanner scanner = new Scanner(System.in);
+        boolean cerrar = false;
         int opcTipoOperadores;
 
         do {
@@ -533,6 +354,7 @@ public class Main {
             System.out.println("*         3. Logicos                  *");
             System.out.println("*         4. Asignación               *");
             System.out.println("*         5. Incremento / Decremento  *");
+            System.out.println("*         6. Volver al menu anterior  *");
             System.out.println("*         0. Salir.                   *");
             System.out.println("***************************************");
             System.out.print("Digite su opción: ");
@@ -550,20 +372,7 @@ public class Main {
                     System.out.println("* % :Devuelve el resto de la división del primer operando por el segundo / int div = 5%3;  *");
                     System.out.println("*                                                                                          *");
                     System.out.println("********************************************************************************************");
-                    System.out.println("*              1. Ver siguiente Tipo de Operador                                           *");
-                    System.out.println("*              0. Salir.                                                                   *");
-                    System.out.println("********************************************************************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int opAritmetico = opcAritmetica.nextInt();
-                    switch (opAritmetico) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 2:
                     System.out.println("****************************************************************************************************");
                     System.out.println("*                                        RELACIONALES                                              *");
@@ -576,20 +385,7 @@ public class Main {
                     System.out.println("* <=: Comprueba si el valor del primer operando es menor o igual que el segundo / boolean (5<=3);  *");
                     System.out.println("*                                                                                                  *");
                     System.out.println("****************************************************************************************************");
-                    System.out.println("*                           1. Ver siguiente Tipo de Operador                                      *");
-                    System.out.println("*                           0. Salir.                                                              *");
-                    System.out.println("****************************************************************************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int opRelacionales = opcRelacionales.nextInt();
-                    switch (opRelacionales) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 3:
                     System.out.println("*******************************************************************************************");
                     System.out.println("*                                        LOGICOS                                          *");
@@ -599,20 +395,7 @@ public class Main {
                     System.out.println("* ! Invierte el valor de un operando booleano /  boolean resultado = !(5>3);              *");
                     System.out.println("*                                                                                         *");
                     System.out.println("*******************************************************************************************");
-                    System.out.println("*                           1. Ver siguiente Tipo de Operador                             *");
-                    System.out.println("*                           0. Salir.                                                     *");
-                    System.out.println("*******************************************************************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int itemlogicos = opcLogicos.nextInt();
-                    switch (itemlogicos) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 4:
                     System.out.println("**********************************************************************************************************************");
                     System.out.println("*                                                   ASIGNACIÓN                                                       *");
@@ -630,45 +413,25 @@ public class Main {
                     System.out.println("*    int a=5;a%=3;                                                                                                   *");
                     System.out.println("*                                                                                                                    *");
                     System.out.println("**********************************************************************************************************************");
-                    System.out.println("*                                   1. Ver siguiente Tipo de Operador                                                *");
-                    System.out.println("*                                   0. Salir.                                                                        *");
-                    System.out.println("**********************************************************************************************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int itemAsihnacion = opcAsignacion.nextInt();
-                    switch (itemAsihnacion) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-
+                    break;
                 case 5:
-                    System.out.println("*******************************************************************************************");
-                    System.out.println("*                               INCREMENTO / DECREMENTO                                   *");
-                    System.out.println("*                                                                                         *");
-                    System.out.println("* ++ Incrementa el valor del opernado en 1 /  int a= 5;++;                                *");
-                    System.out.println("* -- Decrementa el valor del opernado en 1 /  int a= 5;++;                                *");
-                    System.out.println("*                                                                                         *");
-                    System.out.println("*******************************************************************************************");
-                    System.out.println("*                                  0. Salir.                                              *");
-                    System.out.println("*******************************************************************************************");
-                    System.out.print("Digite su opción: ");
-
-                    int itemIncDecr = opcIncDecr.nextInt();
-                    switch (itemIncDecr) {
-                        case 1:
-                            break;
-                        case 0:
-                            System.exit(0);  // Salir del programa
-                            break;
-                    }
-                    scanner.close();
+                    System.out.println("************************************************************");
+                    System.out.println("*                   INCREMENTO / DECREMENTO                *");
+                    System.out.println("*                                                          *");
+                    System.out.println("* ++ Incrementa el valor del opernado en 1 /  int a= 5;++; *");
+                    System.out.println("* -- Decrementa el valor del opernado en 1 /  int a= 5;++; *");
+                    System.out.println("*                                                          *");
+                    System.out.println("************************************************************");
+                    break;
                 default:
+                    System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-        } while (!cerrar3);
+            if (opcTipoOperadores == 6 || opcTipoOperadores == 0) {
+                break;
+            }
+            salida();
+        } while (!cerrar);
     }
 
     private static void condicionalelseif() {
@@ -754,6 +517,7 @@ public class Main {
                     }
                     break;
                 default:
+                    System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
             if (opcCodicional == 5 || opcCodicional == 0) {
@@ -812,19 +576,24 @@ public class Main {
                     int calificacion;
                     calificacion = scanner.nextInt();
                     switch (calificacion) {
-                        case 1: case 2:
+                        case 1:
+                        case 2:
                             System.out.println("* Su calificacion es F                    *");
                             break;
-                        case 3: case 4:
+                        case 3:
+                        case 4:
                             System.out.println("* Su calificación es: D                   *");
                             break;
-                        case 5: case 6:
+                        case 5:
+                        case 6:
                             System.out.println("* Su calificación es: C                   *");
                             break;
-                        case 7: case 8:
+                        case 7:
+                        case 8:
                             System.out.println("* Su calificación es: B                   *");
                             break;
-                        case 9: case 10:
+                        case 9:
+                        case 10:
                             System.out.println("* Su calificación es: A                   *");
                             break;
                         default:
@@ -873,12 +642,12 @@ public class Main {
                     System.out.println("*********************************************");
                     System.out.println("* Digite un numero y sepa si es par o impar *");
                     System.out.print("* Numero: ");
-
                     int numero = scanner.nextInt();
-                    String res = (numero%2==0)?"* Su numero es par":"* Su numero es impar";
+                    String res = (numero % 2 == 0) ? "* Su numero es par" : "* Su numero es impar";
                     System.out.println(res);
-
+                    break;
                 default:
+                    System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
             if (opcCodicional == 3 || opcCodicional == 0) {
@@ -926,9 +695,125 @@ public class Main {
                     System.out.println("* Adivine el numero entre 1 y 10            *");
                     System.out.print("* Numero: ");
 
-                    int numero = scanner.nextInt();
-                    // Continuar trabajando aqui...
+                    int secretNumber = (int) (Math.random() * 10 + 1);
+                    int numAdivina;
+
+                    do {
+                        numAdivina = scanner.nextInt();
+                        if (numAdivina < secretNumber) {
+                            System.out.println("Demasiado bajo, intenta nuevamente.");
+                        } else if (numAdivina > secretNumber) {
+                            System.out.println("Demasiado alto, intenta nuevamente.");
+                        } else {
+                            System.out.println("¡Felicidades! Has adivinado el número.");
+                        }
+                    } while (numAdivina != secretNumber);
                 default:
+                    break;
+            }
+            if (opcCodicional == 3 || opcCodicional == 0) {
+                break;
+            }
+            salida();
+        } while (!cerrar);
+    }
+
+    private static void buclewhile() {
+        Scanner scanner = new Scanner(System.in);
+        boolean cerrar = false;
+        int opcCodicional;
+
+        do {
+            System.out.println("***********************************");
+            System.out.println("*              WHILE              *");
+            System.out.println("***********************************");
+            System.out.println("*     1. Explicación              *");
+            System.out.println("*     2. Ejercicio                *");
+            System.out.println("*     3. Volver al menú anterior  *");
+            System.out.println("*     0. Salir                    *");
+            System.out.println("***********************************");
+            System.out.print("Digite su opción: ");
+            opcCodicional = scanner.nextInt();
+
+            switch (opcCodicional) {
+                case 1:
+                    System.out.println("********************************************");
+                    System.out.println("*                     WHILE                *");
+                    System.out.println("* Permite repetir una accion en un bucle   *");
+                    System.out.println("* siempre y cuando se cumpla una condicion *");
+                    System.out.println("* booleana de control.                     *");
+                    System.out.println("*                                          *");
+                    System.out.println("********************************************");
+                    break;
+                case 2:
+                    System.out.println("***********************************************");
+                    System.out.println("*                   EJERCICIO                 *");
+                    System.out.println("***********************************************");
+                    System.out.println("* Digite un numero para realizar la sumatoria *");
+                    System.out.print("* Numero: ");
+                    int numero = scanner.nextInt();
+                    int sum1 = 0;
+                    int tot = 0;
+                    while (sum1 < numero) {
+                        sum1 = sum1 + 1;
+                        tot = tot + sum1;
+                    }
+                    System.out.println(tot);
+                default:
+                    System.out.println("Opción inválida, intente nuevamente.");
+                    break;
+            }
+            if (opcCodicional == 3 || opcCodicional == 0) {
+                break;
+            }
+            salida();
+        } while (!cerrar);
+    }
+
+    private static void buclefor() {
+        Scanner scanner = new Scanner(System.in);
+        boolean cerrar = false;
+        int opcCodicional;
+
+        do {
+            System.out.println("***********************************");
+            System.out.println("*               FOR               *");
+            System.out.println("***********************************");
+            System.out.println("*     1. Explicación              *");
+            System.out.println("*     2. Ejercicio                *");
+            System.out.println("*     3. Volver al menú anterior  *");
+            System.out.println("*     0. Salir                    *");
+            System.out.println("***********************************");
+            System.out.print("Digite su opción: ");
+            opcCodicional = scanner.nextInt();
+
+            switch (opcCodicional) {
+                case 1:
+                    System.out.println("**********************************************");
+                    System.out.println("*                       FOR                  *");
+                    System.out.println("* Permite realizar una accion en un bucle    *");
+                    System.out.println("* hasta que se cumpla una condicion definida *");
+                    System.out.println("* booleana de control.                       *");
+                    System.out.println("*                                            *");
+                    System.out.println("**********************************************");
+                    break;
+                case 2:
+                    System.out.println("***********************************************");
+                    System.out.println("*                   EJERCICIO                 *");
+                    System.out.println("***********************************************");
+                    System.out.println("* Digite un numero para realizar la sumatoria *");
+                    System.out.print("* Numero: ");
+                    int numero = scanner.nextInt();
+                    int sum1 = 0;
+                    int tot = 0;
+                    for (int i = 0; i < numero; i++) {
+                        sum1 = sum1 + 1;
+                        tot = tot + sum1;
+                    }
+                    System.out.println(tot);
+                    break;
+                default:
+                    System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
             if (opcCodicional == 3 || opcCodicional == 0) {
