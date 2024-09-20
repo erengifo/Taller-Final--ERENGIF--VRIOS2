@@ -266,12 +266,13 @@ public class DetalleExplicacion {
 
     public static void ejemploConstantes() {
         System.out.println("****************************************");
-        System.out.println("*      EJEMPLO CONSTANTES              *");
+        System.out.println("*          EJEMPLO CONSTANTES          *");
         System.out.println("* public static final                  *");
         System.out.println("* int TIEMPO_ESPERA_CONEXION = 30;     *");
-        System.out.println("****************************************");
+        System.out.println("*                                      *");
         System.out.println("* public static final                  *");
         System.out.println("* boolean MODO_DEPURACION = true;      *");
+        System.out.println("*                                      *");
         System.out.println("****************************************");
     }
 

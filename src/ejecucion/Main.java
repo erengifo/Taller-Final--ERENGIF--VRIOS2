@@ -13,8 +13,6 @@ public class Main {
     public static void main(String[] args) {
         boolean cerrar = false;
         Scanner scanner = new Scanner(System.in);
-        Scanner scannerValidacionMenuPrincipal = new Scanner(System.in);
-
 
         int opc;
         Titulo.tituloPrincipal();
@@ -57,12 +55,11 @@ public class Main {
                     buclefor();
                     break;
                 case 0:
-                    break;
+                    System.exit(0);
                 default:
                     System.out.println("Opción Invalida. Intente nuevamente.");
                     break;
             }
-            break;
         } while (!cerrar);
     }
 
@@ -77,7 +74,6 @@ public class Main {
             Validaciones.opcionValida(scannerDatosPrimitivos);
 
             opcdp = scannerDatosPrimitivos.nextInt();
-
 
             switch (opcdp) {
                 case 1:
@@ -104,17 +100,18 @@ public class Main {
                 case 8:
                     DetalleExplicacion.explicacionBoolean();
                     break;
-                case 0:
+                case 9:
                     break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            //ESTE IF NO ESTA HACIENDO NADA
-            if (opcdp == 9 || opcdp == 0) {
+            if (opcdp == 9) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -126,12 +123,7 @@ public class Main {
         do {
             SubMenus.tiposString();
             Validaciones.opcionValida(scannerOpcionesString);
-
             opcStrin = scannerOpcionesString.nextInt();
-            // Esta llamando la clase validaciones
-            Validaciones.opcionValida(scannerOpcionesString);
-            opcStrin = scannerOpcionesString.nextInt();
-
             switch (opcStrin) {
                 case 1:
                     DetalleExplicacion.explicacionString();
@@ -142,16 +134,18 @@ public class Main {
                 case 3:
                     DetalleExplicacion.explicacionStringBuffer();
                     break;
-                case 0:
+                case 4:
                     break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcStrin == 4 || opcStrin == 0) {
+            if (opcStrin == 4) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -164,8 +158,6 @@ public class Main {
             SubMenus.constantes();
             Validaciones.opcionValida(scannerOpcionConstantes);
             opcConstantes = scannerOpcionConstantes.nextInt();
-            // Esta llamando la clase validaciones
-            Validaciones.opcionValida(scannerOpcionConstantes);
 
             switch (opcConstantes) {
                 case 1:
@@ -176,29 +168,29 @@ public class Main {
                     break;
                 case 3:
                     break;
-
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcConstantes == 3 || opcConstantes == 0) {
+            if (opcConstantes == 3) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
     private static void tiposDeOperadores() {
-        Scanner scanner = new Scanner(System.in);
-        Scanner scannerValidacionMenuPrincipal = new Scanner(System.in);
+        Scanner scannertipodeoperador = new Scanner(System.in);
         boolean cerrar = false;
         int opcTipoOperadores;
 
         do {
             SubMenus.tiposOperadores();
             // Esta llamando la clase validaciones
-            Validaciones.opcionValida(scannerValidacionMenuPrincipal);
-            opcTipoOperadores = scanner.nextInt();
+            Validaciones.opcionValida(scannertipodeoperador);
+            opcTipoOperadores = scannertipodeoperador.nextInt();
 
             switch (opcTipoOperadores) {
                 case 1:
@@ -216,27 +208,30 @@ public class Main {
                 case 5:
                     DetalleExplicacion.explicacionOperadorIncrementoDecremento();
                     break;
+                case 6:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcTipoOperadores == 6 || opcTipoOperadores == 0) {
+            if (opcTipoOperadores == 6) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
     private static void condicionalelseif() {
         Scanner scanner = new Scanner(System.in);
-        Scanner scannerValidacionMenuPrincipal = new Scanner(System.in);
         boolean cerrar = false;
         int opcCodicional;
 
         do {
             SubMenus.IfElseifElse();
             // Esta llamando la clase validaciones
-            Validaciones.opcionValida(scannerValidacionMenuPrincipal);
+            Validaciones.opcionValida(scanner);
             opcCodicional = scanner.nextInt();
 
             switch (opcCodicional) {
@@ -252,14 +247,18 @@ public class Main {
                 case 4:
                     EjerciciosPracticos.explicacionIfElseifElse();
                     break;
+                case 5:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcCodicional == 5 || opcCodicional == 0) {
+            if (opcCodicional == 5) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -272,10 +271,7 @@ public class Main {
             SubMenus.MenuSwitch();
             // Esta llamando la clase validaciones
             Validaciones.opcionValida(scannerValidacionSwich);
-
             opcCodicional = scannerValidacionSwich.nextInt();
-            Validaciones.opcionValida(scannerValidacionSwich);
-
 
             switch (opcCodicional) {
                 case 1:
@@ -283,13 +279,18 @@ public class Main {
                     break;
                 case 2:
                     EjerciciosPracticos.EjercicioSwitch();
+                case 3:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
+                    System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcCodicional == 3 || opcCodicional == 0) {
+            if (opcCodicional == 3) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -313,14 +314,18 @@ public class Main {
                 case 2:
                     EjerciciosPracticos.ejercicioTernaria();
                     break;
+                case 3:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcCodicional == 3 || opcCodicional == 0) {
+            if (opcCodicional == 3) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -342,13 +347,17 @@ public class Main {
                     break;
                 case 2:
                     EjerciciosPracticos.ejercicioDoWhile();
+                case 3:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
                     break;
             }
-            if (opcCodicional == 3 || opcCodicional == 0) {
+            if (opcCodicional == 3) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -372,13 +381,17 @@ public class Main {
                 case 2:
                     EjerciciosPracticos.ejercicioWhile();
                     break;
+                case 3:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
             }
-            if (opcCodicional == 3 || opcCodicional == 0) {
+            if (opcCodicional == 3) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
     }
 
@@ -400,34 +413,19 @@ public class Main {
                 case 2:
                     EjerciciosPracticos.ejericioFor();
                     break;
+                case 3:
+                    break;
+                case 0:
+                    System.exit(0);
                 default:
                     System.out.println("Opción inválida, intente nuevamente.");
                     break;
             }
-            if (opcCodicional == 3 || opcCodicional == 0) {
+            if (opcCodicional == 3) {
                 break;
             }
-            salida();
+            Validaciones.salida();
         } while (!cerrar);
-    }
-
-    private static void salida() {
-        Scanner scannerSalida = new Scanner(System.in);
-        int opcsubmenu;
-        SubMenus.opcionSalida();
-
-        // Esta llamando la clase validaciones
-        Validaciones.opcionValida(scannerSalida);
-        opcsubmenu = scannerSalida.nextInt();
-        switch (opcsubmenu) {
-            case 1:
-                break;
-            case 0:
-                System.exit(0);  // Salir del programa
-                break;
-            default:
-                break;
-        }
     }
 
 }

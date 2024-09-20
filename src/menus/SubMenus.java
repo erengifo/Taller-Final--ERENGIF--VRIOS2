@@ -39,7 +39,7 @@ public class SubMenus {
         System.out.println("*             CONSTANTES              *");
         System.out.println("***************************************");
         System.out.println("*         1. Explicación              *");
-        System.out.println("*         2. Ejercicio                *");
+        System.out.println("*         2. Ejemplo                  *");
         System.out.println("*         3. Volver al menú anterior  *");
         System.out.println("*         0. Salir                    *");
         System.out.println("***************************************");
